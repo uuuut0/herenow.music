@@ -1,0 +1,34 @@
+/* section-banner */
+nav{
+    opacity: .1;
+}
+.section-banner-container{
+    height: 125px;
+    position: relative;
+    /* overflow: hidden; */
+    border: 1px solid #000;
+
+}
+.section-banner-img{
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    /* background-color: #d33e3e; */
+    overflow: hidden;
+}
+.section-banner-img img{
+    
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    opacity: .4;
+}
+
+.section-banner-title h2{
+    color: black;
+    margin: auto;
+    border: 1px solid #000;
+}
+

@@ -1,0 +1,90 @@
+0503/ 09:40
+
+把一些共同的css移到 coMMON 
+ 首頁行動版輪播寬度還沒調好 所以整頁寬度會跑掉
+
+
+  .header-nav-container {
+    background-color: rgba(84, 84, 84, .8);
+    /* box-shadow: 0px 0px 100px -10px var(--default-theme-main) ; */
+    overflow: hidden;
+
+
+}
+
+.header-nav {
+    position: relative;
+    height: 75px;
+    margin: auto;
+    width: 100%;
+    /* min-width: 640px;     */
+
+}
+
+.header-nav-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* width: 60px; */
+    aspect-ratio: 1/1;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.header-nav-logo img {
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.header-navLinks-wrapper ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+    /* border-bottom: solid 1px black; */
+    margin: auto;
+    padding: 0 40px;
+    min-width: 468px;
+}
+
+.header-navLinks-wrapper-mobile ul {
+    display: none;
+}
+
+.header-navLinks-wrapper ul>li:hover {
+    background-color: #513c3c;
+}
+
+li.header-nav-link {
+    color: #18838f;
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+    line-height: 3rem;
+    padding: 0 1rem;
+    margin: calc((75px - 3rem)/2) 0;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+li.header-nav-link a {
+    color: var(--focus-title-sub-dark);
+}
+
+li.header-nav-link:hover a {
+    color: var(--focus-title-dark);
+}
+
+.header-nav-menu {
+    display: none;
+    /* max-height: 0px; */
+    background-color: #8943df;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: auto;
+    /* z-index: 300; */
+    transition: 5s ease;
+    cursor: pointer;
+} 
