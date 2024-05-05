@@ -74,23 +74,25 @@
 .photowall-wrap{
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 400px 400px 400px;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    justify-content: center;
+    grid-gap: 1rem 1rem;
+    grid-auto-flow: dense;
 }
 .photoitem{
     
     color: #af1414;
+    width: auto;
+    max-height: 40rem;
+    /* width: 100px;
+    height: 100px; */
+}
+.wideitem{
     grid-column: span 2;
-    /* width: 100px;
-    height: 100px; */
 }
-.photoitem:nth-child(5){
-    
-    color: #af1414;
-    grid-column: span 4;
-    /* width: 100px;
-    height: 100px; */
-}
+
 .item-img{
     width: 100%;
     height: 100%;
@@ -99,6 +101,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: .6;
+    object-position: center;
+    opacity: .8;
 }
 
