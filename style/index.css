@@ -1,7 +1,6 @@
-html {
-    /* font-size: 10px; */
+/* html {
     font-size: calc((10/ 1200) *100vw);
-}
+} */
 
 :root {
     --container-padding: 100px;
@@ -82,9 +81,9 @@ body {
 
 .slider-img img {
     width: 100%;
-    /* height: 600px; */
+    height: 100%;
     object-fit: cover;
-    z-index: -1;
+    /* z-index: -1; */
     /* opacity: .3; */
 
 
@@ -99,6 +98,7 @@ body {
     flex-wrap: wrap;
     /* align-items: space-between; */
     align-items: flex-end;
+    z-index: 1;
 }
 
 .slider-content-titles {
@@ -463,9 +463,9 @@ body {
 /* RWD */
 @media screen and (min-width: 1600px) {
 
-    html {
+    /* html {
         font-size: 14px;
-    }
+    } */
 
 }
 

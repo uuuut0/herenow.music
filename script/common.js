@@ -26,19 +26,42 @@ function mobilemenuToggle(){
 function  carouselController(){
     
 }
+function elementToggleControl(){
+    const toggleHead= document.querySelector('.toggle-head')
+    const toggleBody= document.querySelector('.toggle-body')
+    const activeTag ='toggle-show'
+    if(toggleHead !==null && toggleBody !==null ){
 
+        toggleBody.classList.contains(activeTag) ? toggleBody.classList.remove(activeTag) : toggleBody.classList.add(activeTag)
+
+
+    }else{
+        alert('failed to find toggle')
+    }
+}
 
 
 function init(){
     const menubtn= document.querySelector('#menubtn')
     const menubtn2= document.querySelector('#mobile-menu h1')
+    const aboutToggle = document.querySelector('.history-item')
+
+
     menubtn.addEventListener('click',()=>{
 
-        mobilemenuToggle()
-    })
-    menubtn2.addEventListener('click',()=>{
+        mobilemenuToggle() 
 
-        mobilemenuToggle()
     })
+    if(menubtn2!==null){
+        menubtn2.addEventListener('click',()=>{
+
+            mobilemenuToggle()
+        })
+
+    }
+    aboutToggle.addEventListener('click',()=>{
+        elementToggleControl()
+    })
+
 }
 init()

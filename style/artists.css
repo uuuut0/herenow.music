@@ -1,0 +1,104 @@
+:root {
+    --container-padding: 100px;
+    --viewport-max-width: 1600px;
+    --viewport-min-width: 800px;
+
+
+    /* font-size */
+    --default-fz: 16px;
+    --lg-title-fz: 28px;
+
+
+
+    /* font color --dark theme*/
+    --focus-title-dark: #eaeaea;
+    --focus-title-sub-dark: #e3e3e3;
+    --feature-title-dark: #d2d2d2;
+    --feature-title-sub-dark: #727272;
+    --feature-text-dark: #b2b2b2;
+
+
+    --content-text-light: #372a2a;
+    --content-text-sub-light: #3e3434;
+    /* section BG color */
+    /* --default-theme-main: #1b2667; */
+    --default-theme-main: #2e0bac;
+
+    --default-theme-sub: #6264e9;
+
+
+    --theme-pop: #af1414;
+}
+
+.section-artistIntro-content-wrap {
+    margin: 2rem 0;
+    box-sizing: border-box;
+    padding: 1.8rem 0rem;
+
+}
+
+.artistIntro-content-title {
+    /* border: 1px solid #000; */
+    background-color: #261f714d;
+    padding: 2rem 0rem;
+}
+
+.artistIntro-content-title h2 {
+    color: var(--feature-title-dark);
+    /* border: 1px solid #000; */
+    font-size: 1.8rem;
+    line-height: 2rem;
+    letter-spacing: .12rem;
+    text-align: center;
+    margin: auto;
+    font-weight: 400;
+}
+
+.artistIntro-content-txt {
+    padding: 3rem 0;
+}
+
+.artistIntro-content-txt p {
+    color: var(--feature-text-dark);
+    /* border: 1px solid #000; */
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: .1rem;
+    max-width: 80%;
+    letter-spacing: .12rem;
+    text-align: center;
+    margin: auto;
+}
+
+
+.photowall-wrap{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 400px 400px 400px;
+}
+.photoitem{
+    
+    color: #af1414;
+    grid-column: span 2;
+    /* width: 100px;
+    height: 100px; */
+}
+.photoitem:nth-child(5){
+    
+    color: #af1414;
+    grid-column: span 4;
+    /* width: 100px;
+    height: 100px; */
+}
+.item-img{
+    width: 100%;
+    height: 100%;
+}
+.item-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .6;
+}
+
