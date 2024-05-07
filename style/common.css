@@ -208,68 +208,6 @@ body {
     padding: 0 40px;
     min-width: 468px;
 }
-.header-navLinks-wrapper-mobile{
-    /* display: none; */
-    display: block;
-    position: absolute;
-    top: 40px;
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-    padding-top: 70px;
-    z-index: 200;
-    transition: 1s;
-    display: none;
-    background-color: #6863639f;
-    background: rgba(42, 42, 42, 0.55);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.8px);
-    -webkit-backdrop-filter: blur(7.8px);
-
-}
-.header-navLinks-wrapper-mobile ul {
-    display: block;
-}
-.header-navLinks-wrapper-mobile ul {
-    /* position: absolute;
-    top: 0px;
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-    padding-top: 70px;
-    z-index: 200;
-    transition: 1s;
-    display: none;
-    background-color: #6863639f;
-    background: rgba(42, 42, 42, 0.55);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.8px);
-    -webkit-backdrop-filter: blur(7.8px); */
-
-}
-
-.header-navLinks-wrapper-mobile ul li {
-    text-align: center;
-    background-color: #242424;
-}
-
-.header-nav-mobile-active {
-    top: -10px;
-    display: block;
-}
-
-/* header - nav -mobile */
-.header-navLinks-wrapper-mobile .header-nav-link a {
-    color: rgb(61, 60, 60);
-    font-size: 1.8rem;
-    line-height: 2.4rem;
-    letter-spacing: .4em;
-}
-
-
-
 .header-navLinks-wrapper ul>li:hover {
     background-color: #513c3c;
 }
@@ -295,6 +233,52 @@ li.header-nav-link a {
 li.header-nav-link:hover a {
     color: var(--focus-title-dark);
 }
+.header-navLinks-wrapper-mobile{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 100vh;
+
+    box-sizing: border-box;
+    padding-top: 70px;
+    z-index: 200;
+    transition: 1s;
+    display: none;
+
+    background-color: #6863639f;
+    background: rgba(42, 42, 42, 0.55);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.8px);
+    -webkit-backdrop-filter: blur(7.8px);
+
+}
+.header-navLinks-wrapper-mobile ul {
+    display: block;
+}
+
+.header-navLinks-wrapper-mobile ul li {
+    text-align: center;
+    background-color: #242424a9;
+}
+
+.header-nav-mobile-active {
+    top: -10px;
+    display: block;
+}
+.header-navLinks-wrapper-mobile .header-nav-link a {
+    color: rgb(194, 194, 194);
+    font-size: 1.8rem;
+    line-height: 3rem;
+    letter-spacing: .4em;
+}
+/* header - nav -mobile */
+
+
+
+
+
+
 
 
 
@@ -458,7 +442,32 @@ li.header-nav-link:hover a {
 
     aspect-ratio: 1/1;
 }
+/* ---- */
+.social-icons-wrapper {
+    width: 100%;
+}
 
+.social-icons {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.social-icons li {
+    margin-right: 2px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.social-icons li:last-child {
+    margin-right: 0;
+}
+
+.social-icons li img {
+    width: 46px;
+
+    aspect-ratio: 1/1;
+}
 /* footer------------- */
 /* footer-notifyInfo */
 .footer-notifyInfo {
@@ -604,6 +613,12 @@ li.header-nav-link:hover a {
     line-height: 60px;
 
 }
+@media screen and (min-width:769px) {
+    .header-navLinks-wrapper-mobile{
+        display: none;
+        opacity: 0;
+    }
+}
 @media screen and (max-width: 1200px) {
     html {
         font-size: 10px;
@@ -635,6 +650,7 @@ li.header-nav-link:hover a {
         font-size: 10px;
     }
 
+
     .header-nav-logo {
         left: calc(var(--container-padding) * (-1));
     }
@@ -648,6 +664,20 @@ li.header-nav-link:hover a {
     }
     .section-title-container h2{
         font-size: 2.4rem;
+    }
+
+    li.header-nav-link {
+        padding: 0 .2rem;
+    }
+    li.header-nav-link a {
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 30px;
+        /* font-size: 1.6rem;
+        letter-spacing: .15rem;
+        line-height: 3rem; */
+    
+        color: var(--focus-title-sub-dark);
     }
 }
 
@@ -670,7 +700,10 @@ li.header-nav-link:hover a {
     .header-navLinks-wrapper {
         display: none;
     }
-
+    .header-navLinks-wrapper-mobile{
+        display: unset;
+        opacity: 100%;
+    }
     .header-nav-logo {
         left: 0;
 
