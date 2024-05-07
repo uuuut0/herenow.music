@@ -145,8 +145,6 @@ function init() {
     const menubtn2 = document.querySelector('#mobile-menu h1')
     const menuWrap = document.querySelector('#mobile-menu ul.header-navLinks')
 
-    //head FULLclick
-    const aboutToggles = document.getElementsByClassName('toggle-element')
 
     const lbBtn = document.querySelector('.photoitem')
     const lbCloseBtn = document.querySelector('.lightbox-container .panel-icon-box')
@@ -171,14 +169,6 @@ function init() {
                 mobilemenuToggle()
             }
         })
-    }
-    // ABOUT TOGGLE
-    if (aboutToggles) {
-        for (let i = 0; i < aboutToggles.length; i++) {
-            aboutToggles[i].addEventListener('click', (e) => {
-                elementListToggleControl(e.currentTarget)
-            })
-        }
     }
 
 

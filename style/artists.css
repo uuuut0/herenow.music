@@ -345,7 +345,7 @@
     }
 }
 
-.lb-img-expand{height: 20%; cursor: pointer; opacity: .7;}
+.lb-img-expand{height: 20%; opacity: .7;}
 .lb-content-expand{height: 80%; cursor: auto;
     transform: translateX(0px);
     opacity: 1;

@@ -1,27 +1,18 @@
 // mobile menu control
-function mobilemenuToggle(){
-    const mobileMenu =document.querySelector('.header-navLinks-wrapper-mobile')
+function mobilemenuToggle() {
+    const mobileMenu = document.querySelector('.header-navLinks-wrapper-mobile')
+    const activeTag = ''
 
-    // alert(mobileMenu.style.display)
-    // mobileMenu.classList.add('header-nav-mobile-active')
-    // mobileMenu.style.height= mobileMenu.style.height ==='0px'?'500px':'0px'
-        mobileMenu.style.display= mobileMenu.style.display ==='none'?'block':'none'
-        // mobileMenu.style.top= mobileMenu.style.top ==='-10px'?'60px':'-10px'
-        // if(mobileMenu.style.display=='none'){
-        //     // mobileMenu.classList.add('header-nav-mobile-active')
-        //     alert('y')
-        // }else{
-        //     // mobileMenu.classList.remove('header-nav-mobile-active')
-        //     alert('n')
+    mobileMenu.style.display === 'block' ? mobileMenu.style.display ='none' :mobileMenu.style.display = 'block'
 
-        // }
+    const noscrollTag = 'noscroll'
+    let webBody = document.querySelector('body')
+    if (webBody) {
+        webBody.classList.contains(noscrollTag) ? webBody.classList.remove(noscrollTag) : webBody.classList.add(noscrollTag)
 
-
+    }
 
 }
-
-
-
 
 function  carouselController(){
     
@@ -41,27 +32,70 @@ function elementToggleControl(){
 }
 
 
-function init(){
-    const menubtn= document.querySelector('#menubtn')
-    const menubtn2= document.querySelector('#mobile-menu h1')
-    const aboutToggle = document.querySelector('.history-item')
-
-
-    menubtn.addEventListener('click',()=>{
-
-        mobilemenuToggle() 
-
-    })
-    if(menubtn2!==null){
-        menubtn2.addEventListener('click',()=>{
-
-            mobilemenuToggle()
-        })
-
-    }
-    aboutToggle.addEventListener('click',()=>{
-        elementToggleControl()
-    })
+function generateAnimation(){
 
 }
+
+function addAnimation(element){
+    let anim =`
+    .works-wrap
+     {
+        animation: carousellMove 20s linear infinite; 
+    }
+    .works-wrap:hover{
+        animation-play-state:paused
+    }
+
+    @keyframes carousellMove {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-288rem);
+            /* wrapWidth - 備用總共寬度 -空白空間 */
+        }
+    }    
+    `
+    // element.style.animation= anim;
+
+    const styleTag = document.createElement('style')
+    styleTag.textContent=anim
+    document.head.appendChild(styleTag);
+}
+
+
+function init(){
+    const menubtn= document.querySelector('#menubtn')
+    const menuWrap = document.querySelector('#mobile-menu ul.header-navLinks')
+
+
+    //HEADER NAV MOBILE
+    if(menubtn){
+        menubtn.addEventListener('click',mobilemenuToggle)
+    }
+
+    if(menuWrap){
+        menuWrap.addEventListener('click', (e) => {
+            if (e.target === menuWrap) {
+                mobilemenuToggle()
+            }
+        })
+        
+    }
+
+
+    const carousellWrap = document.querySelector('.work-first')
+    window.addEventListener('load',()=>{
+            addAnimation(carousellWrap)
+    })
+    
+}
 init()
+
+
+function classToggle(activeTag,element){
+
+    if (element&&activeTag) {
+        element.classList.contains(activeTag) ? element.classList.remove(activeTag) : element.classList.add(activeTag)
+    }
+}

@@ -11,14 +11,97 @@ section-'NAME'-block-'bNAME'
 section-title-'NAME'
 section-title-'NAME', container
 
+
+common class 說明：
+page-section:針對下方需要推空間的元素　同一給予margin-bottom
+    !特殊區塊不使用　例如橫向捲動 
+
 { EXAMPLE
     <div class="section-title-news section-title">
         <div class="section-title-container container">
-        </div>
-    </div>
-    <div class="section-news section-title">
-        <div class="section-title-container container">
+        <h2>EXAMPLE SECTION TITLE</h2>
         </div>
     </div>
 
+    <section class="section-EXAMPLE page-section">
+        <div class="section-EXAMPLE-container section-container container">
+        </div>
+    </section>
+
 }
+
+common 物件
+card
+block
+.block-wrap,.block-img,.block-content
+rwd會column 有gap 
+    <div class="block-wrap">
+        <div class="block-img"></div>
+        <div class="block-content"></div>
+    </div>
+
+
+card ()
+
+.card {
+    display: inline-block;
+    width: 36rem;
+    border-radius: .2rem;
+    margin-right: 3rem;
+    overflow: hidden;
+
+    background-color: #7e7e7e;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: inset 2px 0 6px #49494994;
+    position: relative;
+    cursor: pointer;
+}
+
+.card-img {
+    padding-left: 2rem;
+}
+
+.card-img img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    display: block;
+}
+
+.card-title {
+    background-color: #363636;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.card-title-deco {
+    display: block;
+    background-color: var(--theme-pop);
+    width: 50px;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(65% 0%, 100% 0, 100% 100%, 0% 100%);
+    /* z-index: 2; */
+    position: absolute;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.card:hover .card-title-deco {
+    /* background-color:  #901717; */
+    background: linear-gradient(-215deg, #901717 85%, #982525 95%, #e16a6a 100%);
+    width: 100%;
+    /* height: 60%; */
+    /* bottom: 50%; */
+    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+    /* clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); */
+}
+
+.card:hover h4 {
+    text-decoration: wavy
+}
+
+
