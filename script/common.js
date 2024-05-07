@@ -3,7 +3,7 @@ function mobilemenuToggle() {
     const mobileMenu = document.querySelector('.header-navLinks-wrapper-mobile')
     const activeTag = ''
 
-    mobileMenu.style.display === 'block' ? mobileMenu.style.display ='none' :mobileMenu.style.display = 'block'
+    mobileMenu.style.display === 'block' ? mobileMenu.style.display = 'none' : mobileMenu.style.display = 'block'
 
     const noscrollTag = 'noscroll'
     let webBody = document.querySelector('body')
@@ -14,30 +14,39 @@ function mobilemenuToggle() {
 
 }
 
-function  carouselController(){
-    
+function carouselController() {
+
 }
-function elementToggleControl(){
-    const toggleHead= document.querySelector('.toggle-head')
-    const toggleBody= document.querySelector('.toggle-body')
-    const activeTag ='toggle-show'
-    if(toggleHead !==null && toggleBody !==null ){
+function elementToggleControl() {
+    const toggleHead = document.querySelector('.toggle-head')
+    const toggleBody = document.querySelector('.toggle-body')
+    const activeTag = 'toggle-show'
+    if (toggleHead !== null && toggleBody !== null) {
 
         toggleBody.classList.contains(activeTag) ? toggleBody.classList.remove(activeTag) : toggleBody.classList.add(activeTag)
 
 
-    }else{
+    } else {
         alert('failed to find toggle')
     }
 }
 
 
-function generateAnimation(){
+//sliderControl
+function sliderControl() {
+    const sliderWrap = document.querySelector('.slider-img')
+    const currentValue = sliderWrap.style.top
+    // sliderWrap.style.context.transformY(-10)
+    alert('hi')
 
 }
 
-function addAnimation(element){
-    let anim =`
+function generateAnimation() { }
+
+function addAnimation(element) {
+
+
+    let anim = `
     .works-wrap
      {
         animation: carousellMove 20s linear infinite; 
@@ -59,43 +68,52 @@ function addAnimation(element){
     // element.style.animation= anim;
 
     const styleTag = document.createElement('style')
-    styleTag.textContent=anim
+    styleTag.textContent = anim
     document.head.appendChild(styleTag);
 }
 
 
-function init(){
-    const menubtn= document.querySelector('#menubtn')
+function init() {
+    const menubtn = document.querySelector('#menubtn')
     const menuWrap = document.querySelector('#mobile-menu ul.header-navLinks')
 
-
-    //HEADER NAV MOBILE
-    if(menubtn){
-        menubtn.addEventListener('click',mobilemenuToggle)
+    const sliderBtns = document.querySelectorAll('.sliderBtn')
+    if (sliderBtns) {
+        for (let i = 0; i < sliderBtns.length; i++) {
+            sliderBtns[i].addEventListener('click', sliderControl)
+        }
     }
 
-    if(menuWrap){
+    //HEADER NAV MOBILE
+    if (menubtn) {
+        menubtn.addEventListener('click', mobilemenuToggle)
+    }
+
+    if (menuWrap) {
         menuWrap.addEventListener('click', (e) => {
             if (e.target === menuWrap) {
                 mobilemenuToggle()
             }
         })
-        
+
     }
 
 
     const carousellWrap = document.querySelector('.work-first')
-    window.addEventListener('load',()=>{
-            addAnimation(carousellWrap)
+    window.addEventListener('load', () => {
+        addAnimation(carousellWrap)
     })
-    
+
+
+
+    // var swiper = new Swiper(".mySwiper", {});
 }
 init()
 
 
-function classToggle(activeTag,element){
+function classToggle(activeTag, element) {
 
-    if (element&&activeTag) {
+    if (element && activeTag) {
         element.classList.contains(activeTag) ? element.classList.remove(activeTag) : element.classList.add(activeTag)
     }
 }

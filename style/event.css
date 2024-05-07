@@ -1,0 +1,114 @@
+.upcoming-list{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-gap: 2rem 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+
+.infoCardWrap{
+    min-width: 320px;
+    min-height: 160px;
+    /* aspect-ratio: 16/9 ; */
+    display: flex;
+}
+.infoTag{
+    width: 23%;
+    height: 33%;
+    background-color: var(--feature-text-dark);
+    position: relative;
+    box-sizing: border-box;
+    padding: 2%;
+    box-shadow: inset -.5rem 0px 6px 0px rgba(99, 99, 99, 0.349);
+    display: flex;
+    justify-content: end;
+}
+.infoMain{
+    width: 77%;
+    background-color: #353535;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    box-sizing: border-box;
+    padding: 2rem 2rem;
+    position: relative;
+    gap: 1.2rem;
+}
+.infoDate{
+    width: 100%;
+    height: fit-content;
+}
+.infoMain p{
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--feature-title-sub-dark)
+}
+.infoMain h3{
+    border-top: 1px solid var(--focus-title-dark);
+    height: fit-content;
+    width: 100%;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: var(--feature-title-dark);
+}
+.infoTag span{
+    display: inline-block;
+
+    color: #414455;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+.infoTag span:last-child{
+    transform: translateY(50%);
+    font-size: 2.8rem;
+
+}
+.infoMain-deco{
+    position: absolute;
+    width: 2rem;height: 2rem;
+    top: 0;
+    right: 0;
+    background-color: var(--theme-pop);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+
+
+@media screen and (max-width:900px) {
+
+    .upcoming-list{
+        display: grid;
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-gap: 2rem 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .infoCardWrap{
+        flex-wrap: wrap;
+        gap: 0;
+        min-width: unset;
+        width: auto;
+    }
+    .infoMain{
+        width:100%;
+    }
+    .infoTag{
+        width: unset;
+        height: unset;
+        padding-bottom: 2rem;
+        box-shadow: inset 0rem -.3rem 1px 0px rgba(31, 19, 19, 0.329);
+
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+
+}
+
+@media screen and (max-width: 414px) {
+
+
+}

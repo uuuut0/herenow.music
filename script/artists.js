@@ -49,9 +49,9 @@ function lightboxControl() {
     if (lb) {
         lb.classList.contains(activeTag) ? lbCloseTask() : lbOpenTask()
     }
-    // if (otherElement) {
-    //     otherElement.style.display === 'block' ? otherElement.style.display = 'none' : otherElement.style.display = 'block'
-    // }
+    if (otherElement) {
+        otherElement.style.display === 'block' ? otherElement.style.display = 'none' : otherElement.style.display = 'block'
+    }
     if (webBody) {
         webBody.classList.contains(noscrollTag) ? webBody.classList.remove(noscrollTag) : webBody.classList.add(noscrollTag)
     }

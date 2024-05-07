@@ -17,7 +17,7 @@ page-section:針對下方需要推空間的元素　同一給予margin-bottom
     !特殊區塊不使用　例如橫向捲動 
 
 { EXAMPLE
-    <div class="section-title-news section-title">
+    <div class="section-title-EXAMPLE section-title">
         <div class="section-title-container container">
         <h2>EXAMPLE SECTION TITLE</h2>
         </div>
@@ -105,3 +105,16 @@ card ()
 }
 
 
+4/14
+2024/5/4(六) 19:30
+
+THEWALL 台北
+
+沃號 Wooff Band"摩登世界"巡迴表演
+
+5/21
+2024/5/4(六) 19:30
+
+THEWALL 台北
+
+沃號 Wooff Band"摩登世界"巡迴表演
