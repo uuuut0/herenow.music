@@ -37,7 +37,6 @@ function sliderControl() {
     const sliderWrap = document.querySelector('.slider-img')
     const currentValue = sliderWrap.style.top
     // sliderWrap.style.context.transformY(-10)
-    alert('hi')
 
 }
 

@@ -358,11 +358,15 @@ li.header-nav-link:hover a {
 
 .logo-pic {
     width: 60px;
-    height: 40px;
+    height: 100%;
     overflow: hidden;
+    box-sizing: border-box;
+    padding: 3px;
+
 }
 
 .logo-pic img {
+    display: block;
     width: 100%;
     object-fit: cover;
     /* object-fit: contain; */

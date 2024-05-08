@@ -1,4 +1,8 @@
-.upcoming-list{
+body{
+    color: var(--feature-title-dark);
+}
+
+.upcoming-list {
     display: grid;
     /* grid-template-columns: 1fr 1fr 1fr; */
     grid-gap: 2rem 1rem;
@@ -6,13 +10,14 @@
 }
 
 
-.infoCardWrap{
+.infoCardWrap {
     min-width: 320px;
     min-height: 160px;
     /* aspect-ratio: 16/9 ; */
     display: flex;
 }
-.infoTag{
+
+.infoTag {
     width: 23%;
     height: 33%;
     background-color: var(--feature-text-dark);
@@ -23,7 +28,8 @@
     display: flex;
     justify-content: end;
 }
-.infoMain{
+
+.infoMain {
     width: 77%;
     background-color: #353535;
     display: flex;
@@ -34,16 +40,19 @@
     position: relative;
     gap: 1.2rem;
 }
-.infoDate{
+
+.infoDate {
     width: 100%;
     height: fit-content;
 }
-.infoMain p{
+
+.infoMain p {
     width: 100%;
     font-size: 1.6rem;
     color: var(--feature-title-sub-dark)
 }
-.infoMain h3{
+
+.infoMain h3 {
     border-top: 1px solid var(--focus-title-dark);
     height: fit-content;
     width: 100%;
@@ -51,7 +60,8 @@
     line-height: 3rem;
     color: var(--feature-title-dark);
 }
-.infoTag span{
+
+.infoTag span {
     display: inline-block;
 
     color: #414455;
@@ -59,14 +69,17 @@
     font-weight: bold;
     font-size: 2.4rem;
 }
-.infoTag span:last-child{
+
+.infoTag span:last-child {
     transform: translateY(50%);
     font-size: 2.8rem;
 
 }
-.infoMain-deco{
+
+.infoMain-deco {
     position: absolute;
-    width: 2rem;height: 2rem;
+    width: 2rem;
+    height: 2rem;
     top: 0;
     right: 0;
     background-color: var(--theme-pop);
@@ -75,40 +88,112 @@
 
 
 
-@media screen and (max-width:900px) {
 
-    .upcoming-list{
+/* moreEvents */
+
+.moreEvents-list {
+    box-sizing: border-box;
+    padding: 5rem 20rem;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    align-items: center;
+    grid-gap: 2rem 1rem;
+
+}
+
+.event-block-wrap {
+    background-color: var(--content-text-sub-light);
+    width: auto;
+    /* max-width: 60rem; */
+    background: rgb(60, 60, 60);
+    background: linear-gradient(117deg, rgba(60, 60, 60, 1) 34%, rgb(79, 66, 66) 89%, rgb(61, 49, 49) 100%);
+}
+
+.block-event-content {
+    padding: 2rem 1rem;
+    width: 80%;
+    align-content: space-between;
+    /* display: unset; */
+    box-sizing: border-box;
+}
+.block-event-img {
+    width: 20%;
+}
+.block-event-content p {
+    width: 100%;
+    font-size: 1.4rem;
+    color: var(--feature-title-sub-dark);
+}
+
+.block-event-content h3 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    padding: 1rem 0;
+}
+
+
+.event-content-intro{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: 1rem .5rem;
+    background-color: #16151536;
+}
+@media screen and (max-width:900px) {
+    .moreEvents-list {
+        padding: 1rem 0;
+    }
+    .upcoming-list {
         display: grid;
         /* grid-template-columns: 1fr 1fr 1fr; */
         grid-gap: 2rem 1rem;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
-    .infoCardWrap{
+
+    .infoCardWrap {
         flex-wrap: wrap;
         gap: 0;
         min-width: unset;
         width: auto;
     }
-    .infoMain{
-        width:100%;
+
+    .infoMain {
+        width: 100%;
     }
-    .infoTag{
+
+    .infoTag {
         width: unset;
         height: unset;
         padding-bottom: 2rem;
         box-shadow: inset 0rem -.3rem 1px 0px rgba(31, 19, 19, 0.329);
 
     }
-
+    .moreEvents-list {
+        /* box-sizing: border-box;
+        padding: 5rem 20rem;
+        display: grid;
+        width: 100%; */
+        padding: 5rem 0rem;
+        align-items: start;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+    .event-block-wrap{
+        flex-direction: column;
+    }
+    .block-event-content,.block-event-img {
+        width: 100%;
+    }
+    .block-event-img img{
+        object-fit: scale-down;
+    }
 }
 
 @media screen and (max-width: 768px) {
-
-
-
-}
-
-@media screen and (max-width: 414px) {
+    .block-event-content,.block-event-img {
+        width: 100%;
+    }
 
 
 }
+
+@media screen and (max-width: 414px) {}

@@ -1,11 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>業務洽詢 | HereNow Music</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/event.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+    <!-- google icon -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 200,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+
 </head>
+
 <body>
-    
+
+    <header class="section-header">
+        <div class="header-nav-container container">
+            <nav class="header-nav">
+                <div class="header-nav-logo">
+                    <a href="index.html">
+                        <img src="images/common/logo-herenow.png">
+                    </a>
+                </div>
+                <div class="header-navLinks-wrapper">
+                    <ul class="header-navLinks">
+                        <li class="header-nav-link"><a href="about.html">關於我們</a></li>
+                        <li class="header-nav-link"><a href="artists.html">藝人群像</a></li>
+                        <li class="header-nav-link"><a href="news.html">最新消息</a></li>
+                        <li class="header-nav-link"><a href="event.html">活動資訊</a></li>
+                        <li class="header-nav-link"><a href="service.html">業務洽詢</a></li>
+                    </ul>
+                </div>
+                <div class="header-nav-menu" id="menubtn">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
+                <div class="header-navLinks-wrapper-mobile" id="mobile-menu">
+                    <ul class="header-navLinks">
+                        <li class="header-nav-link"><a href="about.html">關於我們</a></li>
+                        <li class="header-nav-link"><a href="artists.html">藝人群像</a></li>
+                        <li class="header-nav-link"><a href="news.html">最新消息</a></li>
+                        <li class="header-nav-link"><a href="event.html">活動資訊</a></li>
+                        <li class="header-nav-link"><a href="service.html">業務洽詢</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="section-banner">
+        <div class="section-banner-container container">
+            <div class="section-banner-img">
+                <img src="./images/pageAbout/banner-about.jpg" alt="">
+            </div>
+            <div class="section-banner-title">
+                <h2>業務洽詢</h2>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <footer class="section-footer">
+        <div class="footer-nav-container container">
+            <nav class="footer-nav">
+                <div class="footer-navWrapper">
+                    <div class="footer-nav-info">
+                        <div class="info-logo">
+                            <div class="logo-pic">
+                                <img src="images/common/logo-herenow.png">
+                            </div>
+                            <h3>HereNow Music</h3>
+                        </div>
+                        <div class="info-wrap">
+                            <p>320桃園市中壢區復興路46號9樓</p>
+                            <p>info@herenow.com</p>
+                        </div>
+                        <ul class="footer-info-links">
+                            <li>
+                                <a href="#">交通資訊</a>
+                            </li>
+                            <li>
+                                <a href="#">聯絡我們</a>
+                            </li>
+                            <li>
+                                <a href="#">隱私權聲明</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-nav-copywright">
+                        <div class="footer-icons-wrapper">
+                            <ul class="footer-icons">
+                                <li class="icon-txt">Follow Us On</li>
+                                <li><a href="#"><img src="images/common/socials-fb.svg" alt="" srcset=""></a></li>
+                                <li><a href="#"><img src="images/common/socials-instagram.svg" alt="" srcset=""></a>
+                                </li>
+                                <li><a href="#"><img src="images/common/socials-youtube.svg" alt="" srcset=""></a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+
+                        <p class="copywright">© 2024 HereNow Music All Rights Reserved </p>
+                    </div>
+
+                </div>
+                <div class="footer-notifyInfo">
+                    <p>本網站為緯育TibaMe前端工程師專業技術養成班第..期學員專題作品,本平台僅供學習、展示之用。</p>
+                </div>
+            </nav>
+        </div>
+    </footer>
+    <script src="script/artists.js"></script>
+
 </body>
-</html>
