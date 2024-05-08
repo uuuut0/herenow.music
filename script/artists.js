@@ -149,6 +149,9 @@ function init() {
     const lbBtn = document.querySelector('.photoitem')
     const lbCloseBtn = document.querySelector('.lightbox-container .panel-icon-box')
 
+    const lbBtns = document.querySelectorAll('.photoitem')
+    const lbCloseBtns = document.querySelectorAll('.lightbox-container .panel-icon-box')
+
     //menu-mobile 
     const clickToExpand = document.querySelector('.lightbox-wrap .lb-content')
 
@@ -176,7 +179,17 @@ function init() {
 
     const lbContainer = document.querySelector('.photowall-lightbox')
     if (lbBtn && lbCloseBtn) {
-        lbBtn.addEventListener('click', lightboxControl)
+
+
+        for(let i=0;i<lbBtns.length;i++){
+            lbBtns[i].addEventListener('click',lightboxControl)
+        }
+        for(let i=0;i<lbCloseBtns.length;i++){
+            lbCloseBtns[i].addEventListener('click',lightboxControl)
+        }
+
+
+        // lbBtn.addEventListener('click', lightboxControl)
         lbCloseBtn.addEventListener('click', lightboxControl)
     }
     //click the lightboxdrop control

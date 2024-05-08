@@ -111,7 +111,14 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    opacity: .7;
+    transition: .3s;
+
 }
+.item-img:hover img{
+    opacity: 1;
+}
+
 /* .lb-active{
     max-height: 100vh;
     max-width: 100%;
@@ -345,9 +352,8 @@
     }
 }
 
-.lb-img-expand{height: 20%; opacity: .7;}
+.lb-img-expand{height: 20%;;}
 .lb-content-expand{height: 80%; cursor: auto;
     transform: translateX(0px);
-    opacity: 1;
     box-shadow: 0px 0rem 15px 1px rgba(119, 115, 115, 0);
 }
