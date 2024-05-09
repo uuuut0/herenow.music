@@ -227,6 +227,24 @@ function init() {
 
     window.addEventListener('resize', lightboxRest)
 
+
+    mobileMenuTask()
+
+    function mobileMenuTask() {
+        const screenHeight =225
+        const activeTag = 'header-nav-mobile-active'
+        const menubar = document.querySelector('.header-nav')
+        if (menubar) {
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY
+                if (scrollPosition > 225 && !menubar.classList.contains(activeTag)) {
+                    menubar.classList.add(activeTag)
+                } else if (scrollPosition < 225 && menubar.classList.contains(activeTag)) {
+                    menubar.classList.remove(activeTag)
+                }
+            })
+        }
+    }
 }
 
 init()

@@ -74,6 +74,9 @@ function addAnimation(element) {
 
 function init() {
     const menubtn = document.querySelector('#menubtn')
+    const mobileCloseBtn = document.querySelector('.mobile-nav-panel-close')
+
+
     const menuWrap = document.querySelector('#mobile-menu ul.header-navLinks')
 
     const sliderBtns = document.querySelectorAll('.sliderBtn')
@@ -87,6 +90,9 @@ function init() {
     if (menubtn) {
         menubtn.addEventListener('click', mobilemenuToggle)
     }
+    if (mobileCloseBtn) {
+        mobileCloseBtn.addEventListener('click', mobilemenuToggle)
+    }
 
     if (menuWrap) {
         menuWrap.addEventListener('click', (e) => {
@@ -94,9 +100,27 @@ function init() {
                 mobilemenuToggle()
             }
         })
+    }
+    // const menubar = document.querySelector('.header-nav')
+    mobileMenuTask()
+
+    function mobileMenuTask() {
+        const activeTag = 'header-nav-mobile-active'
+        const menubar = document.querySelector('.header-nav')
+        if (menubar) {
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY
+                if (scrollPosition > 525 && !menubar.classList.contains(activeTag)) {
+                    menubar.classList.add(activeTag)
+                } else if (scrollPosition < 525 && menubar.classList.contains(activeTag)) {
+                    menubar.classList.remove(activeTag)
+                }
+            })
+        }
+    }
+    function mobileMenuTaskRest() {
 
     }
-
 
     const carousellWrap = document.querySelector('.work-first')
     window.addEventListener('load', () => {
