@@ -189,7 +189,6 @@ function init() {
         }
 
 
-        // lbBtn.addEventListener('click', lightboxControl)
         lbCloseBtn.addEventListener('click', lightboxControl)
     }
     //click the lightboxdrop control
@@ -246,5 +245,5 @@ function init() {
         }
     }
 }
+window.onload=init
 
-init()
